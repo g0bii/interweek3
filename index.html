@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FTC Champions / Robot Archive</title>
+    <meta name="description" content="An interactive archive of FTC Championship robot systems." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <header class="site-header">
+      <a class="brand" href="#top"><span class="brand-mark">F</span><span>FTC<br />ARCHIVE</span></a>
+      <nav aria-label="Main navigation"><a href="#archive">Champions</a><a href="#anatomy">Anatomy</a><a href="#about">About</a></nav>
+      <button class="sound-button" id="motionToggle" aria-pressed="false"><span class="pulse-dot"></span> PAUSE MOTION</button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">FIRST TECH CHALLENGE / WORLD CHAMPIONSHIP</p>
+          <h1 id="hero-title">WINNING<br /><em>MOTION.</em></h1>
+          <p class="hero-intro">A hands-on field guide to championship-class FTC robot architecture: fast cycles, precise scoring, and the mechanisms that make both possible.</p>
+          <a class="cta" href="#anatomy">EXPLORE THE MACHINE <span>↘</span></a>
+        </div>
+        <div class="hero-robot" aria-label="Animated orange and black competition robot illustration">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="hero-number">01</div>
+          <div class="robot robot-hero">
+            <div class="tower"><i></i><i></i><b></b></div><div class="mast"></div>
+            <div class="arm"><span class="elbow"></span><span class="forearm"></span><span class="claw"><i></i><i></i></span></div>
+            <div class="chassis"><span class="bumper"></span><span class="vent"></span><span class="vent"></span></div>
+            <div class="wheel wheel-l"></div><div class="wheel wheel-r"></div>
+          </div>
+          <span class="robot-label label-arm">ARTICULATED ARM</span><span class="robot-label label-drive">MECANUM DRIVE</span>
+        </div>
+        <div class="scroll-mark">SCROLL TO INSPECT <span>↓</span></div>
+      </section>
+
+      <section class="archive" id="archive" aria-labelledby="archive-title">
+        <div class="section-heading"><p class="eyebrow">THE RECORD</p><h2 id="archive-title">CHAMPION<br />ARCHIVE<span>.</span></h2></div>
+        <div class="archive-controls" role="tablist" aria-label="Choose a season">
+          <button class="year active" data-year="2018" role="tab" aria-selected="true">2018 <small>Rover Ruckus</small></button>
+          <button class="year" data-year="2019" role="tab" aria-selected="false">2019 <small>Skystone</small></button>
+          <button class="year" data-year="2022" role="tab" aria-selected="false">2022 <small>Freight Frenzy</small></button>
+          <button class="year" data-year="2024" role="tab" aria-selected="false">2024 <small>Centerstage</small></button>
+        </div>
+        <article class="champion-card" id="championCard">
+          <div class="card-index">WORLD<br />CHAMPION<br /><strong id="cardYear">2018</strong></div>
+          <div class="mini-robot-wrap"><div class="robot mini-robot"><div class="tower"><i></i><i></i><b></b></div><div class="mast"></div><div class="arm"><span class="elbow"></span><span class="forearm"></span><span class="claw"><i></i><i></i></span></div><div class="chassis"><span class="bumper"></span><span class="vent"></span></div><div class="wheel wheel-l"></div><div class="wheel wheel-r"></div></div></div>
+          <div class="champion-data"><p class="eyebrow" id="cardGame">ROVER RUCKUS / 2018–19</p><h3 id="cardTitle">HIGH-REACH<br />MINERAL BOT</h3><p id="cardCopy">A compact scoring machine built around a vertical lift and a repeatable mineral delivery path. Its narrow profile made depot alignment and endgame parking less dramatic.</p><div class="specs"><span><b id="cardStat1">4</b> WHEEL DRIVE</span><span><b id="cardStat2">2</b> STAGE LIFT</span><span><b id="cardStat3">360°</b> INTAKE</span></div></div>
+          <button class="inspect" id="inspectButton">INSPECT BUILD <span>↗</span></button>
+        </article>
+        <p class="archive-note">A visual study of common winning-robot principles, organized by FTC Championship era. Robot illustrations are interpretive mechanism diagrams, not official team CAD.</p>
+      </section>
+
+      <section class="anatomy" id="anatomy" aria-labelledby="anatomy-title">
+        <div class="anatomy-intro"><p class="eyebrow">ANATOMY OF A RUN</p><h2 id="anatomy-title">BUILT TO<br /><span>REPEAT.</span></h2><p>Tap a system to trace how hardware turns driver intent into fast, consistent field cycles.</p><div class="part-list" role="tablist" aria-label="Robot systems"><button class="part active" data-part="drive">01 / DRIVETRAIN</button><button class="part" data-part="intake">02 / INTAKE</button><button class="part" data-part="lift">03 / LIFT</button><button class="part" data-part="arm">04 / ARM + CLAW</button></div></div>
+        <div class="anatomy-stage">
+          <div class="target-lines"></div><div class="stage-index" id="stageIndex">01</div>
+          <div class="robot robot-anatomy" id="anatomyRobot"><div class="tower"><i></i><i></i><b></b></div><div class="mast"></div><div class="arm"><span class="elbow"></span><span class="forearm"></span><span class="claw"><i></i><i></i></span></div><div class="chassis"><span class="bumper"></span><span class="vent"></span><span class="vent"></span></div><div class="wheel wheel-l"></div><div class="wheel wheel-r"></div></div>
+          <div class="callout callout-a" id="calloutA"><span>01</span><b>OMNI WHEELS</b><i></i></div><div class="callout callout-b" id="calloutB"><span>02</span><b>POWER PATH</b><i></i></div>
+          <div class="part-detail"><p class="eyebrow" id="detailKicker">SYSTEM 01</p><h3 id="detailTitle">MECANUM<br />DRIVETRAIN</h3><p id="detailCopy">Angled rollers let each wheel add a different vector. Paired with good control code, the chassis can strafe into scoring position without rotating away from the target.</p><div class="detail-meter"><span>PRECISION</span><div><i id="meter"></i></div><b id="meterValue">94%</b></div></div>
+        </div>
+      </section>
+      <section class="about" id="about"><p class="eyebrow">DESIGNED FOR THE CURIOUS</p><p>Every winning robot is a system of tradeoffs. Explore an era, inspect a mechanism, and watch the architecture come alive.</p><a href="#top">BACK TO TOP ↑</a></section>
+    </main>
+    <dialog id="inspectDialog"><button class="close" id="closeDialog" aria-label="Close inspection">×</button><p class="eyebrow">BUILD NOTES</p><h2 id="dialogTitle">HIGH-REACH<br />MINERAL BOT</h2><div id="dialogBody"></div></dialog>
+    <script src="app.js"></script>
+  </body>
+</html>
